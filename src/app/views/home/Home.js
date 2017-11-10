@@ -11,44 +11,45 @@ import { Link }         from 'react-router-dom';
 class Home extends PureComponent {
   state = {
     animated: true,
-    viewEntersAnim: true
+    viewEntersAnim: true,
+      textCenter: true
   };
 
   render() {
-    const { animated, viewEntersAnim } = this.state;
+    const { animated, viewEntersAnim, textCenter } = this.state;
     return(
       <div
         key="homeView"
         className={cx({
           'animatedViews': animated,
-          'view-enter': viewEntersAnim
+          'view-enter': viewEntersAnim,
+            'text-center': textCenter
         })}>
+          <div className="text-center col-lg-12">
+              <div className="col-lg-4"></div>
+              <div className="well col-lg-4"><img style={{width: "100%"}} className="img-circle" src="assets/debs.gif" alt=""/></div>
+              <div className="col-lg-4"></div>
+          </div>
         <Jumbotron>
           <h1>
-            ReactJS + Bootstrap + Server Side rendering
+            In Loving Memory of Deborah
           </h1>
-          <h2>
-            with Hot Reload!!!
-          </h2>
-          <h2>
-            and React Router v4
-          </h2>
-          <h2>
-            and webpack 2.x
-          </h2>
-          <h1>
-            Starter
-          </h1>
-          <p>
-            <Link
-              className="btn btn-success btn-lg"
-              to={'/about'}>
-              <i className="fa fa-info" />
-              &nbsp;
-              go to about
-            </Link>
-          </p>
         </Jumbotron>
+          <div className="text-center col-lg-12">
+              <div className="col-lg-4"></div>
+              <p className="col-lg-4">
+                  <Link
+                      className="btn btn-success btn-lg"
+                      to={'/addamemory'}>
+                      <i className="fa fa-plus-circle" />
+                      &nbsp;
+                      Add a Memory of Deborah
+                  </Link>
+              </p>
+              <div className="col-lg-4"></div>
+          </div>
+
+
       </div>
     );
   }

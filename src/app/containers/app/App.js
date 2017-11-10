@@ -40,11 +40,11 @@ class App extends Component {
   /* eslint-disable no-unused-vars*/
   handleLeftNavItemClick = (event, viewName) => {
     // something to do here?
-  }
+  };
 
   handleRightNavItemClick = (event, viewName) => {
     // something to do here?
-  }
+  };
   /* eslint-enable no-unused-vars*/
 }
 

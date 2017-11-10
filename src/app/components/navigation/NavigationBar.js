@@ -19,7 +19,7 @@ const NavigationBar = ({
           {
             <Humburger />
           }
-          <a className="navbar-brand">
+          <a className="navbar-brand deborah">
             {brand}
           </a>
         </div>

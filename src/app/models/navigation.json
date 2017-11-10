@@ -1,5 +1,5 @@
 {
-  "brand"       : "React Bootstrap Starter",
+  "brand"       : "For The Love of Deborah",
   "leftLinks"   : [],
   "rightLinks"  : [
     {
@@ -9,6 +9,18 @@
     {
       "label" : "About",
       "link"  : "/about"
+    },
+    {
+      "label" : "Add A Memory",
+      "link"  : "/addamemory"
+    },
+    {
+      "label" : "Memories",
+      "link"  : "/memories"
+    },
+    {
+      "label" : "Donate",
+      "link"  : "donate"
     }
   ]
 }
