@@ -192,7 +192,7 @@ function renderFullPage(html) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="fortheloveofdeborah cancer charity">
         <meta name="author" content="scotcode.co.uk">
-        <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/assets/app.styles.css">
       </head>
       <body class="skin-black" style="background-color:#f1f2f7">
