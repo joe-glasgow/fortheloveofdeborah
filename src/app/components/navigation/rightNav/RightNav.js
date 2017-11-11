@@ -14,7 +14,7 @@ const RightNav = ({
         rightLinks.map(
           (aLinkBtn, index) => {
             return (
-              <RightNavButton
+              aLinkBtn.external ? <li key={index}><a target="_blank" href={aLinkBtn.link}>{aLinkBtn.label}</a></li> : <RightNavButton
                 key={index}
                 link={aLinkBtn.link}
                 label={aLinkBtn.label}

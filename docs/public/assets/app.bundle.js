@@ -2841,7 +2841,8 @@ module.exports = {
 		},
 		{
 			"label": "Donate",
-			"link": "donate"
+			"link": "https://donate.justgiving.com/donation-amount?uri=aHR0cHM6Ly9kb25hdGUtYXBpLmp1c3RnaXZpbmcuY29tL2FwaS9kb25hdGlvbnMvNDVmY2M0ZjViYzc2NGY4OGJmYTg0Y2Y3YWY5YTRhODg=",
+			"external": true
 		}
 	]
 };
@@ -5795,7 +5796,15 @@ var RightNav = function RightNav(_ref) {
     'ul',
     { className: 'nav navbar-nav navbar-right' },
     rightLinks.map(function (aLinkBtn, index) {
-      return _react2.default.createElement(_RightNavButton2.default, {
+      return aLinkBtn.external ? _react2.default.createElement(
+        'li',
+        { key: index },
+        _react2.default.createElement(
+          'a',
+          { target: '_blank', href: aLinkBtn.link },
+          aLinkBtn.label
+        )
+      ) : _react2.default.createElement(_RightNavButton2.default, {
         key: index,
         link: aLinkBtn.link,
         label: aLinkBtn.label,
@@ -6165,7 +6174,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(31);
 
-var _views = __webpack_require__(531);
+var _views = __webpack_require__(530);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6201,88 +6210,6 @@ var _temp = function () {
 /***/ }),
 
 /***/ 527:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _components = __webpack_require__(122);
-
-var _AnimatedView = __webpack_require__(107);
-
-var _AnimatedView2 = _interopRequireDefault(_AnimatedView);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //  weak
-
-// import PropTypes      from 'prop-types';
-
-
-var PageNotFound = function (_PureComponent) {
-  _inherits(PageNotFound, _PureComponent);
-
-  function PageNotFound() {
-    _classCallCheck(this, PageNotFound);
-
-    return _possibleConstructorReturn(this, (PageNotFound.__proto__ || Object.getPrototypeOf(PageNotFound)).apply(this, arguments));
-  }
-
-  _createClass(PageNotFound, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _AnimatedView2.default,
-        null,
-        _react2.default.createElement(
-          _components.Jumbotron,
-          null,
-          _react2.default.createElement(
-            'h1',
-            null,
-            'Sorry this page does not exists...'
-          )
-        )
-      );
-    }
-  }]);
-
-  return PageNotFound;
-}(_react.PureComponent);
-
-var _default = PageNotFound;
-exports.default = _default;
-;
-
-var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
-
-  __REACT_HOT_LOADER__.register(PageNotFound, 'PageNotFound', '/Users/josephmorrison/workspace/loveofdebs/src/app/views/PageNotFound/PageNotFound.js');
-
-  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/josephmorrison/workspace/loveofdebs/src/app/views/PageNotFound/PageNotFound.js');
-}();
-
-;
-
-/***/ }),
-
-/***/ 528:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6393,7 +6320,7 @@ var _temp = function () {
 
 /***/ }),
 
-/***/ 529:
+/***/ 528:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6557,7 +6484,7 @@ var _temp = function () {
 
 /***/ }),
 
-/***/ 530:
+/***/ 529:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6693,7 +6620,7 @@ var _temp2 = function () {
 
 /***/ }),
 
-/***/ 531:
+/***/ 530:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6703,7 +6630,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _About = __webpack_require__(528);
+var _About = __webpack_require__(527);
 
 Object.defineProperty(exports, 'About', {
   enumerable: true,
@@ -6712,7 +6639,7 @@ Object.defineProperty(exports, 'About', {
   }
 });
 
-var _Home = __webpack_require__(530);
+var _Home = __webpack_require__(529);
 
 Object.defineProperty(exports, 'Home', {
   enumerable: true,
@@ -6721,7 +6648,7 @@ Object.defineProperty(exports, 'Home', {
   }
 });
 
-var _AddAMemory = __webpack_require__(529);
+var _AddAMemory = __webpack_require__(528);
 
 Object.defineProperty(exports, 'AddAMemory', {
   enumerable: true,
@@ -6739,7 +6666,7 @@ Object.defineProperty(exports, 'ThankYou', {
   }
 });
 
-var _Memories = __webpack_require__(532);
+var _Memories = __webpack_require__(531);
 
 Object.defineProperty(exports, 'Memories', {
   enumerable: true,
@@ -6748,7 +6675,7 @@ Object.defineProperty(exports, 'Memories', {
   }
 });
 
-var _PageNotFound = __webpack_require__(527);
+var _PageNotFound = __webpack_require__(532);
 
 Object.defineProperty(exports, 'PageNotFound', {
   enumerable: true,
@@ -6771,7 +6698,7 @@ var _temp = function () {
 
 /***/ }),
 
-/***/ 532:
+/***/ 531:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6910,6 +6837,88 @@ var _temp = function () {
     __REACT_HOT_LOADER__.register(Memories, 'Memories', '/Users/josephmorrison/workspace/loveofdebs/src/app/views/memories/Memories.js');
 
     __REACT_HOT_LOADER__.register(_default, 'default', '/Users/josephmorrison/workspace/loveofdebs/src/app/views/memories/Memories.js');
+}();
+
+;
+
+/***/ }),
+
+/***/ 532:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _components = __webpack_require__(122);
+
+var _AnimatedView = __webpack_require__(107);
+
+var _AnimatedView2 = _interopRequireDefault(_AnimatedView);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //  weak
+
+// import PropTypes      from 'prop-types';
+
+
+var PageNotFound = function (_PureComponent) {
+  _inherits(PageNotFound, _PureComponent);
+
+  function PageNotFound() {
+    _classCallCheck(this, PageNotFound);
+
+    return _possibleConstructorReturn(this, (PageNotFound.__proto__ || Object.getPrototypeOf(PageNotFound)).apply(this, arguments));
+  }
+
+  _createClass(PageNotFound, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _AnimatedView2.default,
+        null,
+        _react2.default.createElement(
+          _components.Jumbotron,
+          null,
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Sorry this page does not exists...'
+          )
+        )
+      );
+    }
+  }]);
+
+  return PageNotFound;
+}(_react.PureComponent);
+
+var _default = PageNotFound;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(PageNotFound, 'PageNotFound', '/Users/josephmorrison/workspace/loveofdebs/src/app/views/pageNotFound/PageNotFound.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/josephmorrison/workspace/loveofdebs/src/app/views/pageNotFound/PageNotFound.js');
 }();
 
 ;

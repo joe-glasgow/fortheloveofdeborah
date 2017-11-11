@@ -185,17 +185,20 @@ function renderFullPage(html) {
     <!DOCTYPE html>
     <html>
       <head>
-        <title>react bootstrap universal</title>
+        <title>For The Love Of Deborah</title>
         <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="actAdmin">
-        <meta name="author" content="Erwan DATIN">
+        <meta name="description" content="fortheloveofdeborah cancer charity">
+        <meta name="author" content="scotcode.co.uk">
         <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/assets/app.styles.css">
       </head>
       <body class="skin-black" style="background-color:#f1f2f7">
         <section id="root">${html}</section>
+        <section id="copy"><p><small>&copy; 2017 DevByJoe Limited.</small></p>
+        <p><small><a target="_blank" href="http://scotcode.co.uk">scotcode.co.uk</a></small></p></section>
         <script type="text/javascript" src="/assets/app.vendor.bundle.js"></script>
         <script type="text/javascript" src="/assets/app.bundle.js"></script>
       </body>
