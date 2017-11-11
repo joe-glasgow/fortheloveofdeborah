@@ -51,7 +51,7 @@ const Storage = multer.diskStorage({
             if (err) {
                 throw err;
             }
-            const { memories } = JSON.parse(data);
+            const {memories} = JSON.parse(data);
             memories.unshift(newMemory);
             console.log(memories);
             fs.writeFile(json, JSON.stringify({memories}), 'utf-8', err => {
@@ -197,8 +197,10 @@ function renderFullPage(html) {
       </head>
       <body class="skin-black" style="background-color:#f1f2f7">
         <section id="root">${html}</section>
-        <section id="copy"><p><small>&copy; 2017 DevByJoe Limited.</small></p>
+        <div class="container-fluid">
+        <section id="copy"><p><small>&copy; 2017 DevByJoe Limited (Glasgow).</small></p>
         <p><small><a target="_blank" href="http://scotcode.co.uk">scotcode.co.uk</a></small></p></section>
+        </div>
         <script type="text/javascript" src="/assets/app.vendor.bundle.js"></script>
         <script type="text/javascript" src="/assets/app.bundle.js"></script>
       </body>
