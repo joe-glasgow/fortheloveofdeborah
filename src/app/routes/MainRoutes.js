@@ -11,7 +11,7 @@ import {
     PageNotFound,
     AddAMemory,
     ThankYou,
-    Memories
+    Memory
 } from '../views';
 
 const MainRoutes = () => {
@@ -21,7 +21,7 @@ const MainRoutes = () => {
             <Route path="/about" component={About}/>
             <Route path="/addamemory" component={AddAMemory}/>
             <Route path="/thankyou" component={ThankYou}/>
-            <Route path="/memories" component={Memories}/>
+            <Route path="/memory" component={Memory}/>
             <Route component={PageNotFound}/>
         </Switch>
     );

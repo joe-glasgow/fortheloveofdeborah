@@ -25,16 +25,9 @@ class Memories extends React.Component {
                 <h1>
                     Memories
                 </h1>
-                <div className="col-lg-12">
-                    <StackGrid
-                        columnWidth={340}
-                        appear={scaleDown.appear}
-                        appeared={scaleDown.appeared}
-                        enter={scaleDown.enter}
-                        entered={scaleDown.entered}
-                        leaved={scaleDown.leaved}
-                    >
-                        {this.state.memories.map(({ id, name, memory, image }, index) => <div className="well col-lg-12" key={index}>
+                <div style={{display: "inline-block", width: "100%"}} className="col-lg-12 container-fluid">
+                    
+                        {this.state.memories.map(({ id, name, memory, image }, index) => <div className="well col-lg-3" key={index}>
                             <img style={{ width: "100%"}} className="card-img-top" src={`/memoryimages/${image}`} alt={name}/>
                             <div className="card-body">
                                 <h4 className="card-title">From: {name}</h4>
@@ -42,7 +35,6 @@ class Memories extends React.Component {
                             </div>
 
                         </div>)}
-                    </StackGrid>
                 </div>
 
             </AnimatedView>
