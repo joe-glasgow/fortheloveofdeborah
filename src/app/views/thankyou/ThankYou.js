@@ -15,7 +15,7 @@ class PageNotFound extends PureComponent {
                 <Jumbotron>
                     <h1>
                         Thanks you! Your memory of Deborah has been posted!
-                        You can see the list of memories <Link to="memories">here</Link>
+                        You can see the list of memories <Link to="memory">here</Link>
                     </h1>
                 </Jumbotron>
             </AnimatedView>
