@@ -17,6 +17,9 @@ import './style/index.scss';
 const ELEMENT_TO_BOOTSTRAP  = 'root';
 const BootstrapedElement    = document.getElementById(ELEMENT_TO_BOOTSTRAP);
 
+// require
+global.Tether = require('tether');
+
 injectTpEventPlugin();
 
 const renderApp = RootComponent => {

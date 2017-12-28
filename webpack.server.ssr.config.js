@@ -8,7 +8,6 @@ const publicPath = path.join(__dirname, 'docs/public');
 const ouputDirectory = path.join(__dirname, 'src/server/SSR');
 const outputFile = 'index.js';
 
-
 const serverConfig = {
     resolve: {
         alias: {
